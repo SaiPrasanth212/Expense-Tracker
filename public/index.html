@@ -1,0 +1,40 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Include your CSS file -->
+    <script>
+        // Check if the user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            // Redirect to signup page if not logged in
+            window.location.href = 'signup.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="premium-status">Hello</h1> <!-- Placeholder for user status -->
+        <form id="expense-form">
+            <input type="number" id="amount" placeholder="Amount Spent" required>
+            <input type="text" id="description" placeholder="Description" required>
+            <select id="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Salary">Salary</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">Add Expense</button>
+        </form>
+        <button id="purchase-premium">Purchase Premium Membership</button> <!-- Premium Membership Button -->
+        <ul id="expense-list"></ul>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script> <!-- Include Razorpay Checkout -->
+</body>
+</html>

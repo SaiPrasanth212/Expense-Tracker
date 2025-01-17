@@ -1,0 +1,71 @@
+/* public/css/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://images.unsplash.com/photo-1535143210594-2f4a83e9fc9a?fit=crop&w=1400&q=80'); /* Background image */
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light border */
+}
+
+button {
+    background-color: #28a745; /* Green background for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #e9ecef; /* Light gray for expense items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li button {
+    background-color: #dc3545; /* Red for delete button */
+}
+
+li button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}

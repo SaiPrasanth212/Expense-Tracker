@@ -1,0 +1,28 @@
+<!-- public/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Include your CSS file -->
+    <script>
+        // Redirect to expense tracker if already logged in
+        if (localStorage.getItem('loggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Account</h1>
+        <form id="signup-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
