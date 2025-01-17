@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="premium-status">Hello</h1> <!-- Placeholder for user status -->
+        <h1 id="premium-status">Hello, <script>document.write(localStorage.getItem('userName'));</script></h1> <!-- Display logged in user's name -->
         <form id="expense-form">
             <input type="number" id="amount" placeholder="Amount Spent" required>
             <input type="text" id="description" placeholder="Description" required>
@@ -32,6 +32,17 @@
             <button type="submit">Add Expense</button>
         </form>
         <button id="purchase-premium">Purchase Premium Membership</button> <!-- Premium Membership Button -->
+<button id="logout" onclick="logout()">Logout</button> <!-- Logout Button -->
+
+<script>
+    function logout() {
+        localStorage.removeItem('loggedIn'); // Remove login status
+        localStorage.removeItem('userID'); // Remove userID
+        localStorage.removeItem('userName'); // Remove userName
+        window.location.href = 'signup.html'; // Redirect to signup page
+    }
+</script>
+
         <ul id="expense-list"></ul>
     </div>
     <script src="js/script.js"></script>
